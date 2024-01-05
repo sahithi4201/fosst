@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="meet.css">
+</head>
+
+<body>
+    <header class="hed">
+		<div class="logo">
+			<img src="C:\Users\sahit\Desktop\FOSS\WhatsApp Image 2023-12-29 at 22.10.06.jpg">
+			<span class="name">FOSSMeet'24</span>
+		</div>
+		<nav class="eve">
+            <a href="index.html" class="event">Home</a>
+            <a href="faq.html" class="event">FAQs</a>
+			<a href="events.html" class="event">Scheduled Events</a>
+            <a href="https://hasgeek.com/fosscell/fossmeet24/" class="event" target="_blank">About</a>
+            <button onclick="myFunction()" class="event">Dark</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+		</nav>
+	</header>
+    <main>
+        <h1 class="faq-heading">Scheduled Events</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <h1 class="faq-page">Event A </h1>
+                <div class="faq-body">
+                    <p>Time Venue</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <h1 class="faq-page">Event B</h1>
+                <div class="faq-body">
+                    <p>Time Venue</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <h1 class="faq-page">Event C</h1>
+                <div class="faq-body">
+                    <p>Time Venue</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+        
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var body = this.nextElementSibling;
+                if (body.style.display === "block") {
+                    body.style.display = "none";
+                } else {
+                    body.style.display = "block";
+                }
+            });
+        }</script>
+</body>
+
+
+</html>
